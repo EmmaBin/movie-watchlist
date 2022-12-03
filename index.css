@@ -51,11 +51,35 @@ h1{
     text-align: left;
     border: 1px solid #D1D5DB;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-    width: 70vw;
+    width: 60vw;
     max-width: 700px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: -1em auto;
+    margin: -1.9em auto;
+}
+
+#search-icon{
+    padding: 1rem 0;
+    margin-left: 1rem;
+    color:black;
+    font-size: 1.6rem;
+}
+
+#search-input {
+    border: none;
+    padding: 1em;
+    margin-right: auto;
+    flex: 450px 1;
+    font-family: inherit;
+}
+#search-btn{
+    align-self: stretch;
+    background: #F9FAFB;
+    border: none;
+    border-left: 1px solid #D1D5DB;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-family: inherit;
 }
