@@ -1,0 +1,26 @@
+html, body{
+    margin:0;
+    padding:0;
+    background-color: #FFFFFF;
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+}
+header{
+    height: 30rem;
+    background-image: url(assets/header.jpg);
+    opacity: 0.9;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:#FFFFFF;
+
+}
+header h1{
+    font-weight: 800;
+    font-size: 10rem;
+}
+header p{
+    font-weight: 400;
+    font-size: 3rem;
+}
