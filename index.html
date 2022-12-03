@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5bb9642507.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
     <title>Movie Search</title>
 </head>
+
 <body>
     <header>
-        <h1>Find your film</h1>
-        <button>My Watch list</button>
-    </header>
-    <div>
-        <form id="search-movie">
-            <input type="text" placeholder="Search for a movie" id="search-input">
+        <div class="header-container">
+            <h1>Find your film</h1>
+            <button>My Watch list</button>
+        </div>
+
+        <form id="search-movie-form">
+            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            <input type="text" placeholder="Search for a movie" id="search-input" aria-label="Search for a movie">
             <button type="submit" id="search-btn">Search</button>
         </form>
-    </div>
-    <script src="index.js"></script>
+    </header>
+
+
+
+
+    <script src="index.js" type="module"></script>
 </body>
+
 </html>
