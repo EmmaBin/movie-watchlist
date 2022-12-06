@@ -1,0 +1,21 @@
+body{
+    margin:0;
+    padding:0;
+    font-size: 10px;
+
+}
+.empty-container{
+    text-align: center;
+    margin-top:20rem;
+}
+
+.empty-container p{
+    color:#DFDDDD;
+    font-size: 3rem;
+    line-height: 30px;
+}
+.empty-container h4{
+    font-size: 1.5rem;
+    line-height: 24px;
+    font-weight: 700;
+}
