@@ -84,6 +84,13 @@ h1{
     font-family: inherit;
     flex:1;
 }
+
+/* reminder */
+.reminder{
+    padding-top:20rem;
+    font-size: 2rem;
+}
+
 /* explore icon */
 #explore-icon{
     display: flex;

@@ -12,13 +12,21 @@ function onSearchClick(e){
     fetchShortMovie();
 }
 
+// if there is no match search result, catch that possibility by using if false
 function fetchShortMovie(){
     let searchVal= searchEl.value
     fetch(`http://www.omdbapi.com/?apikey=6829f1aa&s=${searchVal}`)
     .then(res => res.json())
     .then(data => {
-        let moviesData = data.Search.slice(0,10);
-        fetchAllMovieData(moviesData)})
+        if (!data.Search){
+            movieList.innerHTML =`
+            <h2 class='reminder'>Unable to find what you are looking for. Please try another search.</h2>
+            `
+        }else{
+            let moviesData = data.Search.slice(0,10);
+            fetchAllMovieData(moviesData)
+        }
+})
 }
 
 
