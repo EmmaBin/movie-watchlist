@@ -60,11 +60,15 @@ function renderHTML(data){
 
             <div class='movie-info-container'>
                 <div class='movie-title'>
+                    <p>
                     ${movieObj.title}
+                    </p>
                     <img src='assets/star.png'>
-                    <p>${
+                    <span>${
                         movieObj.rating === 'N/A' ? 8.0 : movieObj.rating
-                    }</p>
+                    }</span>
+                    
+                   
                 </div>
 
                 <div class='movie-info'>
@@ -77,8 +81,11 @@ function renderHTML(data){
                     <div class='movie-type'>
                         ${movieObj.genre}
                     </div>
-
+                    
+                    <div>
+                    <img src='/assets/add-on.png' class='plus-sign' alt='add-on-icon'>
                     <button class='add-on'> Watchlist </button>
+                    </div>
                 </div>
 
                 <div class='movie-plot'>

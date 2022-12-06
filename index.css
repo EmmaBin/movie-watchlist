@@ -19,6 +19,7 @@ header{
     width:100%; 
     position: relative;
     text-align: center;
+    margin-bottom: 2rem;;
 }
 .header-container{
     display: flex;
@@ -55,6 +56,7 @@ h1{
     left: 0;
     right: 0;
     margin: -1.9em auto;
+
 }
 
 #search-icon{
@@ -106,19 +108,69 @@ h1{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #6B7280;
-    width: 50vw;
-
-    
+    width: 40vw; 
 }
+
 .movie-poster{
     margin-left:0;
     padding-left: 0;
 }
+
 .movie-poster img{
     height: auto;
     max-height: 40rem;
     margin-left: 0;
     padding-left: 0;
+}
 
-    
+.movie-info-container{
+   width: 50rem;
+    border: 1px solid red;
+}
+
+.movie-title{
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    padding-top: 2rem;  
+}
+
+.movie-plot{
+    white-space:normal;
+}
+.movie-title img{
+    padding-left: 1rem;
+}
+.movie-title img,
+.movie-title span{
+    font-weight: 400;
+    line-height:2rem;
+    font-size: 1.6rem;
+
+}
+
+.movie-info{
+    margin-top:2rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding-right: 3rem;
+    margin-bottom: 2rem;
+}
+
+.add-on{
+    border: none;
+    background-color: transparent;
+}
+
+.plus-sign{
+    width: 1.2rem;
+
+}
+
+.movie-plot{
+    color: #6B7280;
+    font-weight:400;
+    font-size: 1.7rem
 }
