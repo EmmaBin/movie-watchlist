@@ -32,14 +32,15 @@ h1{
     font-size: 10rem;
     display: inline;
 }
-.header-container button{
+.header-container a{
     font-weight: 400;
     font-size: 3rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
     outline: none;
-    color:#FFFFFF;
+    color:#141313;
+    text-decoration: none;
 }
 /* search form */
 #search-movie-form{
@@ -125,7 +126,6 @@ h1{
 
 .movie-info-container{
    width: 50rem;
-    border: 1px solid red;
 }
 
 .movie-title{
@@ -140,6 +140,9 @@ h1{
 }
 .movie-title img{
     padding-left: 1rem;
+}
+.movie-title p{
+    line-height: 1.5;
 }
 .movie-title img,
 .movie-title span{
@@ -162,6 +165,7 @@ h1{
 .add-on{
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .plus-sign{

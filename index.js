@@ -46,8 +46,6 @@ function renderHTML(data){
    
     let html=''
     html = moviesArr.map(movieObj=>{
-        console.log(movieObj)
-        
         return `
         <div class='movie-container'>
             <div class='movie-poster'>
@@ -84,7 +82,7 @@ function renderHTML(data){
                     
                     <div>
                     <img src='/assets/add-on.png' class='plus-sign' alt='add-on-icon'>
-                    <button class='add-on'> Watchlist </button>
+                    <button class='add-on' id='${movieObj.imdbID}'>Watchlist </button>
                     </div>
                 </div>
 
@@ -102,13 +100,12 @@ function renderHTML(data){
 
 }
 
+document.querySelectorAll('.add-on').forEach((btn)=>{
+    btn.addEventListener('click', function(e){
+        console.log(e.target.id);
+    })
+})
 
 
 
 
-// console.log(data.Poster)
-// console.log(data.Title)
-// console.log(data.imdbRating)
-// console.log(data.Runtime)
-// console.log(data.Genre)
-// console.log(data.Plot)
