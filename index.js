@@ -43,44 +43,50 @@ function renderHTML(data){
         imdbID: data.imdbID
     }
     moviesArr.push(eachMovieObj)
-    console.log(moviesArr)
+   
     let html=''
     html = moviesArr.map(movieObj=>{
+        console.log(movieObj)
         
         return `
-        <div class='movie-poster'>
-            <img src='${
-                movieObj.poster ==='N/A' ? 'assets/error.jpg' : movieObj.poster
-            }' alt='movie-poster'>
-        </div>
-
-        <div class='movie-info-container'>
-            <div class='movie-title'>
-                ${movieObj.title}
-                <img src='assets/star.png'>
-                <p>${
-                    movieObj.rating === 'N/A' ? 8.0 : movieObj.rating
-                }</p>
+        <div class='movie-container'>
+            <div class='movie-poster'>
+                <img src='${
+                    movieObj.poster === 'N/A' ? 
+                    "https://m.media-amazon.com/images/M/MV5BOGYyOTU2NTMtNzViZi00OTZhLTlhNWYtMWE0NDQ2Y2Y3NmVlXkEyXkFqcGdeQXVyMTYzMTY1MjQ@._V1_SX300.jpg"
+                    : movieObj.poster
+                }' alt='movie-poster'>
             </div>
 
-            <div class='movie-info'>
-                <div class='movie-length'>
+            <div class='movie-info-container'>
+                <div class='movie-title'>
+                    ${movieObj.title}
+                    <img src='assets/star.png'>
+                    <p>${
+                        movieObj.rating === 'N/A' ? 8.0 : movieObj.rating
+                    }</p>
+                </div>
+
+                <div class='movie-info'>
+                    <div class='movie-length'>
+                        ${
+                            movieObj.runtime === 'N/A' ? '120mins': movieObj.runtime
+                        }
+                    </div>
+
+                    <div class='movie-type'>
+                        ${movieObj.genre}
+                    </div>
+
+                    <button class='add-on'> Watchlist </button>
+                </div>
+
+                <div class='movie-plot'>
                     ${
-                        movieObj.runtime === 'N/A' ? '120mins': movieObj.runtime
-                    }
+                        movieObj.plot === 'N/A' ? 'Plot is not available' : movieObj.plot}
                 </div>
-
-                <div class='movie-type'>
-                    ${movieObj.genre}
-                </div>
-
-                <button class='add-on'> Watchlist </button>
+                
             </div>
-
-            <div class='movie-plot'>
-                ${movieObj.plot}
-            </div>
-            
         </div>
         `
     })

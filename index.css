@@ -94,3 +94,31 @@ h1{
     font-size: 5rem;
     opacity: 0.6;
 }
+
+/* each movie html */
+#movie-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.movie-container{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #6B7280;
+    width: 50vw;
+
+    
+}
+.movie-poster{
+    margin-left:0;
+    padding-left: 0;
+}
+.movie-poster img{
+    height: auto;
+    max-height: 40rem;
+    margin-left: 0;
+    padding-left: 0;
+
+    
+}
