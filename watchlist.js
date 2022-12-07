@@ -1,9 +1,12 @@
 const watchlistHtml = document.getElementById('watchlist')
 const emptyContainer = document.querySelector('.empty-container')
+
 //if there are movies in the storage, render the movie according to the movieID
 //give each movie card 'remove' function
 //use removeItem() to remove from the local storage
 //if there nothing in storage, render empty-container
+
+
 if (JSON.parse(localStorage.getItem('watchlist')).length>0){
     emptyContainer.style.display='none';
 
@@ -69,7 +72,17 @@ function renderWatchlist(data){
         </div>
     </div>
     `
-
+    document.querySelectorAll('.remove').forEach((movie)=>{
+        movie.addEventListener('click', function(e){
+            e.preventDefault()
+            //delete the id from JSON.parse(localStorage.getItem('watchlist')
+            let movies = JSON.parse(localStorage.getItem('watchlist'))
+            let savedMovies = movies.filter((movie)=> movie != e.target.id)
+            localStorage.setItem('watchlist', JSON.stringify(savedMovies))
+            console.log(JSON.parse(localStorage.getItem('watchlist')))
+            
+        })
+    })
 
 
 
