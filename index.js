@@ -114,9 +114,11 @@ function renderHTML(data){
     btn.addEventListener('click', function(e){
         e.preventDefault()
         watchlistSet.add(e.target.id)
+        console.log(e.target.id)
         //JSON.stringify will only work on primitive type, set is not primitive, but set is iterable, ...spread operator works on 
         // iterable type. In this case, ... is making a copy of the set and returning an array
         localStorage.setItem('watchlist', JSON.stringify([...watchlistSet]))
+        console.log(JSON.parse(localStorage.getItem('watchlist')))
        
 
     })
