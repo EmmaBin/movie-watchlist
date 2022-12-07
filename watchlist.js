@@ -7,6 +7,8 @@ const emptyContainer = document.querySelector('.empty-container')
 //if there nothing in storage, render empty-container
 
 
+
+
 if (JSON.parse(localStorage.getItem('watchlist')).length>0){
     emptyContainer.style.display='none';
 
@@ -17,6 +19,10 @@ if (JSON.parse(localStorage.getItem('watchlist')).length>0){
     })
 
 }
+
+
+
+
 
 function renderWatchlist(data){
     //destructure the object,{} should be the key 
@@ -74,13 +80,15 @@ function renderWatchlist(data){
     `
     document.querySelectorAll('.remove').forEach((movie)=>{
         movie.addEventListener('click', function(e){
-            e.preventDefault()
+            e.preventDefault();
+            e.target.closest('.movie-container').remove();
+
             //delete the id from JSON.parse(localStorage.getItem('watchlist')
             let movies = JSON.parse(localStorage.getItem('watchlist'))
+
+            //use filter to return the rest of the movies excluding the matching deleted ID
             let savedMovies = movies.filter((movie)=> movie != e.target.id)
             localStorage.setItem('watchlist', JSON.stringify(savedMovies))
-            console.log(JSON.parse(localStorage.getItem('watchlist')))
-            
         })
     })
 
