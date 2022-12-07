@@ -3,6 +3,9 @@ const exploreIcon = document.getElementById('explore-icon')
 const searchEl= document.getElementById('search-input')
 const movieList = document.getElementById('movie-list')
 let moviesArr = []
+//if there is watchlist inside the storage, should keep the pre-existed items. otherwise, render []
+//new Set will delete any duplicates, but set is not an array
+const watchlistSet = new Set(localStorage.getItem("watchlist") ? JSON.parse(localStorage.getItem("watchlist")) : [])
 
 searchBtn.addEventListener('click', onSearchClick)
 
@@ -24,6 +27,7 @@ function fetchShortMovie(){
             `
         }else{
             let moviesData = data.Search.slice(0,10);
+            moviesArr=[]
             fetchAllMovieData(moviesData)
         }
 })
@@ -91,6 +95,7 @@ function renderHTML(data){
                     <div>
                     <img src='/assets/add-on.png' class='plus-sign' alt='add-on-icon'>
                     <button class='add-on' id='${movieObj.imdbID}'>Watchlist </button>
+                    
                     </div>
                 </div>
 
@@ -105,15 +110,20 @@ function renderHTML(data){
     })
     movieList.innerHTML = html.join('')
 
-
-}
-
-document.querySelectorAll('.add-on').forEach((btn)=>{
+    document.querySelectorAll('.add-on').forEach((btn)=>{
     btn.addEventListener('click', function(e){
-        console.log(e.target.id);
+        e.preventDefault()
+        watchlistSet.add(e.target.id)
+        //JSON.stringify will only work on primitive type, set is not primitive, but set is iterable, ...spread operator works on 
+        // iterable type. In this case, ... is making a copy of the set and returning an array
+        localStorage.setItem('watchlist', JSON.stringify([...watchlistSet]))
+       
+
     })
 })
 
+
+}
 
 
 
