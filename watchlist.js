@@ -55,8 +55,8 @@ function renderWatchlist(data){
                 </div>
                 
                 <div>
-                <img src='/assets/add-on.png' class='plus-sign' alt='add-on-icon'>
-                <button class='add-on' id='${imdbID}'>Watchlist </button>
+                <img src='/assets/remove.png' class='remove-sign' alt='remove-icon'>
+                <button class='remove' id='${imdbID}'>Remove</button>
                 
                 </div>
             </div>
