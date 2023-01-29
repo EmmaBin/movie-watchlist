@@ -116,7 +116,7 @@ h1{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #6B7280;
-    width: 40vw; 
+    width: 60vw; 
 }
 
 .movie-poster{
@@ -125,7 +125,7 @@ h1{
 }
 
 .movie-poster img{
-    height: auto;
+    max-width: 30rem;
     max-height: 40rem;
     margin-left: 0;
     padding-left: 0;

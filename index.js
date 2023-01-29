@@ -63,7 +63,8 @@ function renderHTML(data){
             <div class='movie-poster'>
                 <img src='${
                     movieObj.poster === 'N/A' ? 
-                    "https://m.media-amazon.com/images/M/MV5BOGYyOTU2NTMtNzViZi00OTZhLTlhNWYtMWE0NDQ2Y2Y3NmVlXkEyXkFqcGdeQXVyMTYzMTY1MjQ@._V1_SX300.jpg"
+                    // "https://m.media-amazon.com/images/M/MV5BOGYyOTU2NTMtNzViZi00OTZhLTlhNWYtMWE0NDQ2Y2Y3NmVlXkEyXkFqcGdeQXVyMTYzMTY1MjQ@._V1_SX300.jpg"
+                    './assets/error.jpg'
                     : movieObj.poster
                 }' alt='movie-poster'>
             </div>
