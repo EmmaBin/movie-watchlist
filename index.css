@@ -74,8 +74,8 @@ h1{
     flex: 2;
     font-family: inherit;
 }
+
 #search-btn{
-   
     background: #F9FAFB;
     border: none;
     border-left: 1px solid #D1D5DB;
@@ -84,6 +84,8 @@ h1{
     font-family: inherit;
     flex:1;
 }
+
+
 
 /* reminder */
 .reminder{
@@ -174,6 +176,10 @@ h1{
     background-color: transparent;
     cursor: pointer;
 }
+.add-on:active{
+    box-shadow: 2px 2px 5px #51423a;
+}
+
 
 .plus-sign{
     width: 1.2rem;

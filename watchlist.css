@@ -30,6 +30,9 @@ body{
     cursor: pointer;
     
 }
+.remove:active{
+    box-shadow: 2px 2px 5px #564339;
+}
 
 .remove-sign{
     width: 1.2rem;
