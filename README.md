@@ -1,5 +1,5 @@
 # Movie Watchlist App
-### deployat at https://jazzy-sawine-5d9be6.netlify.app/
+### deployed at https://jazzy-sawine-5d9be6.netlify.app/
 
 #### Features:
 * Two pages - index.html watchlist.html
